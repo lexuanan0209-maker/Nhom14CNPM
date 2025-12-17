@@ -56,6 +56,9 @@
                 <span id="registerRoleDisplay">(Người dùng)</span>
             </h2>
 
+            <!-- ROLE ẨN (JS SẼ GÁN user / shipper) -->
+            <input type="hidden" id="regRole" value="user">
+
             <div class="input-group">
                 <label for="regUsername">Tên đăng nhập:</label>
                 <input type="text" id="regUsername" required>
@@ -71,10 +74,7 @@
                 <input type="password" id="regConfirmPassword" required>
             </div>
 
-            <!-- ROLE ẨN - JS GÁN -->
-            <input type="hidden" id="regRole">
-
-            <button type="submit">Đăng ký</button>
+            <button type="submit">Hoàn tất Đăng ký</button>
             <button type="button" id="backToLogin">Quay lại đăng nhập</button>
         </form>
     </section>
