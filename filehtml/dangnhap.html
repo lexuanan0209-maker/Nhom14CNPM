@@ -11,8 +11,10 @@
 </head>
 <body>
 
+    <!-- =========================
+         SECTION ĐĂNG NHẬP
+    ========================== -->
     <section id="loginSection">
-        <!-- FORM ĐĂNG NHẬP -->
         <form id="loginForm">
             <h2>Đăng nhập</h2>
 
@@ -29,7 +31,7 @@
             <button type="submit">Đăng nhập</button>
         </form>
 
-        <!-- KHU VỰC ĐĂNG KÝ -->
+        <!-- KHU VỰC CHỌN ĐĂNG KÝ -->
         <div class="register-options">
             <p>--- Đăng ký tài khoản mới ---</p>
 
@@ -41,6 +43,40 @@
                 Đăng ký với tư cách Người vận chuyển
             </button>
         </div>
+    </section>
+
+
+    <!-- =========================
+         SECTION ĐĂNG KÝ
+    ========================== -->
+    <section id="registerSection" style="display: none;">
+        <form id="registerForm">
+            <h2>
+                Đăng ký tài khoản
+                <span id="registerRoleDisplay">(Người dùng)</span>
+            </h2>
+
+            <div class="input-group">
+                <label for="regUsername">Tên đăng nhập:</label>
+                <input type="text" id="regUsername" required>
+            </div>
+
+            <div class="input-group">
+                <label for="regPassword">Mật khẩu:</label>
+                <input type="password" id="regPassword" required>
+            </div>
+
+            <div class="input-group">
+                <label for="regConfirmPassword">Xác nhận mật khẩu:</label>
+                <input type="password" id="regConfirmPassword" required>
+            </div>
+
+            <!-- ROLE ẨN - JS GÁN -->
+            <input type="hidden" id="regRole">
+
+            <button type="submit">Đăng ký</button>
+            <button type="button" id="backToLogin">Quay lại đăng nhập</button>
+        </form>
     </section>
 
 </body>
