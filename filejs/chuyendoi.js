@@ -1,49 +1,53 @@
-// Biến toàn cục để lưu trữ danh sách sản phẩm mẫu.
+// chuyendoi.js - QUẢN LÝ SẢN PHẨM, LỌC, SẮP XẾP, GIỎ HÀNG
+
+// DỮ LIỆU SẢN PHẨM
 const products = [
-    {
-        id: 1,
-        name: "Điện thoại Samsung Galaxy S23",
-        price: "21990000",
-        img: "",
-        category: "Điện thoại",
-        origin: "Hàn Quốc",
-        sold: 1532,
-        rate: 4.8
-    },
-    {
-        id: 2,
-        name: "Điện thoại iPhone 15 Pro Max",
-        price: "30990000",
-        img: "",
-        category: "Điện thoại",
-        origin: "Mỹ",
-        sold: 2541,
-        rate: 4.9
-    }
+    { id: 1, name: "Điện thoại Samsung Galaxy S23", price: "21990000", img: "/images/dt23.jpg", category: "Điện thoại", origin: "Hàn Quốc", sold: 1532, rate: 4.8 },
+    { id: 2, name: "Điện thoại iPhone 15 Pro Max", price: "30990000", img: "https://cdn.tgdd.vn/Products/Images/42/281570/iphone-15-pro-max-thumb-600x600.jpg", category: "Điện thoại", origin: "Mỹ", sold: 2541, rate: 4.9 },
+    { id: 3, name: "Xiaomi 13T Pro", price: "16990000", img: "https://cdn.tgdd.vn/Products/Images/42/306782/xiaomi-13t-pro-thumb-600x600.jpg", category: "Điện thoại", origin: "Trung Quốc", sold: 850, rate: 4.7 },
+    { id: 53, name: "Nồi chiên không dầu Lock&Lock", price: "2490000", img: "https://cdn.tgdd.vn/Products/Images/4619/236968/camera-hanh-trinh-vietmap-c61-pro-thumb-600x600.jpg", category: "Gia dụng", origin: "Hàn Quốc", sold: 1500, rate: 4.6 }
 ];
 
+// DANH SÁCH SẢN PHẨM ĐANG HIỂN THỊ
+let currentProducts = [...products];
 
-// Task: Lấy dữ liệu sản phẩm từ biến products hoặc updatedProducts trong localStorage
+// BỘ LỌC HIỆN TẠI
+let currentFilter = {
+    category: '🌐 Tất cả',
+    priceRange: '',
+    sortType: '',
+    popular: false,
+    newest: false
+};
+
+// HÀM LẤY KEY GIỎ HÀNG THEO USER
+function getCurrentUserKey(suffix) {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    return currentUser ? `${suffix}_${currentUser.username}` : null;
+}
+window.getCurrentUserKey = getCurrentUserKey;
+
+// LẤY DANH SÁCH SẢN PHẨM MỚI NHẤT
 function getSourceProducts() {
     const storedProducts = localStorage.getItem('updatedProducts');
     return storedProducts ? JSON.parse(storedProducts) : products;
 }
 
-
-// Task: Hiển thị ảnh, tên, giá, số lượng đã bán, đánh giá (rating)
-// Task: Thêm nút “Thêm vào giỏ” cho mỗi sản phẩm
+// HIỂN THỊ SẢN PHẨM RA GIAO DIỆN
 function showProducts(productsArray) {
     const productList = document.getElementById('productList');
     if (!productList) return;
 
-
     productList.innerHTML = '';
 
+    if (productsArray.length === 0) {
+        productList.innerHTML = '<p style="text-align:center; color:#ff5722;">Không tìm thấy sản phẩm nào.</p>';
+        return;
+    }
 
     productsArray.forEach(product => {
         const formattedPrice = parseInt(product.price).toLocaleString('vi-VN') + '₫';
         const stars = '★'.repeat(Math.round(product.rate)) + '☆'.repeat(5 - Math.round(product.rate));
-
 
         productList.innerHTML += `
             <div class="product-card">
@@ -59,19 +63,110 @@ function showProducts(productsArray) {
         `;
     });
 }
+window.showProducts = showProducts;
 
+// ÁP DỤNG BỘ LỌC VÀ SẮP XẾP
+function applyFiltersAndSorts() {
+    let filteredProducts = getSourceProducts();
 
-//Tất cả sản phẩm hiển thị ngay khi tải trang
-document.addEventListener('DOMContentLoaded', () => {
-    const dataToShow = getSourceProducts();
-    showProducts(dataToShow);
-});
+    if (currentFilter.category !== '🌐 Tất cả') {
+        filteredProducts = filteredProducts.filter(p => p.category === currentFilter.category);
+    }
 
+    const searchTerm = document.getElementById('searchInput')?.value.toLowerCase().trim();
+    if (searchTerm) {
+        filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(searchTerm));
+    }
 
-// Hàm trống để tránh lỗi khi click
-function addToCart(productId) {
-    console.log("Thêm sản phẩm ID:", productId);
+    if (currentFilter.priceRange === 'low') filteredProducts = filteredProducts.filter(p => parseInt(p.price) < 3000000);
+    if (currentFilter.priceRange === 'high') filteredProducts = filteredProducts.filter(p => parseInt(p.price) >= 3000000);
+
+    if (currentFilter.popular) filteredProducts.sort((a, b) => b.sold - a.sold);
+    else if (currentFilter.newest) filteredProducts.sort((a, b) => b.id - a.id);
+
+    if (currentFilter.sortType === 'asc') filteredProducts.sort((a, b) => parseInt(a.price) - parseInt(b.price));
+    else if (currentFilter.sortType === 'desc') filteredProducts.sort((a, b) => parseInt(b.price) - parseInt(a.price));
+
+    currentProducts = filteredProducts;
+    showProducts(currentProducts);
 }
+window.applyFiltersAndSorts = applyFiltersAndSorts;
 
+// TÌM KIẾM SẢN PHẨM
+function searchProduct() { applyFiltersAndSorts(); }
+window.searchProduct = searchProduct;
 
+// SẮP XẾP THEO GIÁ
+function sortProducts() {
+    currentFilter.sortType = document.getElementById('sort-price').value;
+    currentFilter.popular = false;
+    currentFilter.newest = false;
+    applyFiltersAndSorts();
+}
+window.sortProducts = sortProducts;
 
+// LỌC THEO DANH MỤC
+function filterCategory(category) {
+    currentFilter.category = category;
+    document.querySelectorAll('.sidebar li').forEach(el => el.classList.remove('active'));
+    const activeEl = Array.from(document.querySelectorAll('.sidebar li')).find(el => el.textContent.includes(category));
+    if (activeEl) activeEl.classList.add('active');
+    applyFiltersAndSorts();
+}
+window.filterCategory = filterCategory;
+window.showAll = () => filterCategory('🌐 Tất cả');
+
+// LỌC NHANH (GIÁ / PHỔ BIẾN / MỚI)
+function filterProducts(type = '') {
+    const priceRangeValue = document.getElementById('filter-price-range').value;
+
+    if (type === 'popular') { currentFilter.popular = true; currentFilter.newest = false; }
+    else if (type === 'newest') { currentFilter.popular = false; currentFilter.newest = true; }
+    else { currentFilter.priceRange = priceRangeValue; currentFilter.popular = false; currentFilter.newest = false; }
+
+    applyFiltersAndSorts();
+}
+window.filterProducts = filterProducts;
+
+// THÊM SẢN PHẨM VÀO GIỎ HÀNG
+function addToCart(productId) {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (!currentUser) { alert("Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!"); return; }
+
+    const cartKey = getCurrentUserKey('cart');
+    const product = getSourceProducts().find(p => p.id === productId);
+    if (!product) { alert("Sản phẩm không tồn tại!"); return; }
+
+    let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+    const existingItem = cart.find(item => item.id === productId);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+        alert(`Đã cập nhật số lượng ${product.name} (x${existingItem.quantity})!`);
+    } else {
+        cart.push({ id: product.id, name: product.name, price: product.price.replace(/\D/g, ''), img: product.img, quantity: 1 });
+        alert(`Đã thêm ${product.name} vào giỏ hàng!`);
+    }
+
+    localStorage.setItem(cartKey, JSON.stringify(cart));
+    if (typeof loadCart === 'function') loadCart();
+}
+window.addToCart = addToCart;
+
+// CẬP NHẬT SỐ LƯỢNG ĐÃ BÁN
+function updateProductSold(productId, quantity = 1) {
+    let productsToUpdate = getSourceProducts();
+    const product = productsToUpdate.find(p => p.id === productId);
+    if (!product) { console.error(`Sản phẩm với ID ${productId} không tồn tại.`); return false; }
+
+    product.sold += quantity;
+    localStorage.setItem('updatedProducts', JSON.stringify(productsToUpdate));
+    return true;
+}
+window.updateProductSold = updateProductSold;
+
+// LOAD SẢN PHẨM KHI MỞ TRANG
+document.addEventListener('DOMContentLoaded', () => {
+    currentProducts = [...getSourceProducts()];
+    applyFiltersAndSorts();
+});
