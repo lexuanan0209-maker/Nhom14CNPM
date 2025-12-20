@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../filecss/admin.css">
+
+    <!-- Script dùng defer để đảm bảo DOM load trước khi JS chạy -->
+    <script src="../filejs/auth.js" defer></script>
+    <script src="../filejs/chuyendoi.js" defer></script>
+    <script src="../filejs/admin.js" defer></script>
+</head>
+
+<body onload="checkAuth()">
+
+    <header class="header">
+        <a href="index.html" class="home-btn">🏠 Trang chủ</a>
+        <h1>👨‍💼 ADMIN DASHBOARD</h1>
+        <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
+    </header>
+
+    <nav class="navbar">
+        <a href="javascript:void(0)" onclick="showAdminTab('orderManagement', this)" class="active tab-btn">📦 Quản lý Đơn hàng</a>
+        <a href="javascript:void(0)" onclick="showAdminTab('productManagement', this)" class="tab-btn">⚙️ Quản lý Sản phẩm</a>
+        <a href="javascript:void(0)" onclick="showAdminTab('shopFeedback', this)" class="tab-btn">⭐ Feedback Shop</a>
+        <a href="adminChat.html" class="tab-btn">💬 Hộp thư Hỗ trợ</a>
+    </nav>
+
+    <main class="admin-container">
+        <div id="adminContent">
+
+            <!-- Quản lý Đơn hàng -->
+            <div id="orderManagement" class="tab-content" style="display: block;">
+                <h2>Danh sách Đơn hàng</h2>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Khách hàng</th> 
+                            <th>ID Đơn hàng</th>
+                            <th>Sản phẩm</th>
+                            <th>Tổng tiền</th>
+                            <th>Ngày đặt</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderList"></tbody>
+                </table>
+            </div>
+
+            <!-- Quản lý Sản phẩm -->
+            <div id="productManagement" class="tab-content">
+                <h2>⚙️ Quản lý Sản phẩm</h2>
+                
+                <!-- Form Thêm / Sửa Sản phẩm -->
+                <h3>Thêm / Sửa Sản phẩm</h3>
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+                    <div class="form-group">
+                        <label for="productName">Tên Sản phẩm:</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Giá:</label>
+                        <input type="number" id="productPrice" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImg">Link Ảnh (URL):</label>
+                        <input type="text" id="productImg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Danh mục:</label>
+                        <input type="text" id="productCategory" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productOrigin">Xuất xứ:</label>
+                        <input type="text" id="productOrigin" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Thêm Sản phẩm</button>
+                        <button type="button" id="cancelEdit" style="display: none;">Hủy</button>
+                    </div>
+                </form>
+
+                <!-- Danh sách Sản phẩm -->
+                <h3>Danh sách Sản phẩm</h3>
+                <table class="product-management-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá (₫)</th>
+                            <th>Danh mục</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productListManagement"></tbody>
+                </table>
+            </div>
+
+            <!-- Feedback Shop -->
+            <div id="shopFeedback" class="tab-content">
+                <h2>⭐ Feedback Shop</h2>
+                <table class="feedback-table">
+                    <thead>
+                        <tr>
+                            <th>ID Đơn hàng</th>
+                            <th>Sản phẩm</th>
+                            <th>Điểm Shop</th>
+                            <th>Nhận xét</th>
+                            <th>Người dùng</th>
+                        </tr>
+                    </thead>
+                    <tbody id="feedbackList"></tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
