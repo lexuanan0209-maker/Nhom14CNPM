@@ -1,0 +1,305 @@
+/* =========================================== */
+/* === ADMIN PANEL CSS - HOÀN CHỈNH === */
+/* =========================================== */
+
+/* --------------------------- */
+/* TOÀN TRANG */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fef5f1;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------- */
+/* HEADER */
+.header {
+  background: #ff5722;
+  color: white;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* 👇 quan trọng */
+  text-align: center;
+}
+
+.header .logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 15px;
+  background: #e0353f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logout-btn:hover {
+  background: #c02d37;
+  transform: translateY(-50%) scale(1.05);
+}
+.header h1 {
+  font-size: 42px !important; /* tăng to hơn */
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  line-height: 1.2; /* giữ chữ gọn, không quá cao */
+}
+
+.home-btn {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 14px; /* 👈 nhỏ lại */
+  font-weight: 600;
+  padding: 6px 10px;
+
+  background-color: #2d89ef;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.home-btn:hover {
+  background-color: #1b5fbd;
+}
+
+/* --------------------------- */
+/* NAVBAR / TABS */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 15px;
+  border-bottom: 2px solid #ff5722;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 12px 15px;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none; /* ĐỂ XÓA GẠCH CHÂN */
+  color: #333; /* ĐỂ CHỮ THÀNH MÀU ĐEN/XÁM (thay vì xanh) */
+  display: inline-block;
+}
+
+.tab-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.tab-btn.active {
+  background-color: #ff5722;
+  color: white;
+}
+
+/* Nội dung tab */
+.tab-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 8px 8px 8px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Hiển thị tab mặc định */
+.tab-content[style*="display: block"] {
+  display: block;
+}
+
+/* Tiêu đề tab */
+#adminContent h2 {
+  color: #ff5722;
+  border-bottom: 2px solid #ffede3;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* --------------------------- */
+/* ADMIN CONTAINER */
+.admin-container {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --------------------------- */
+/* BẢNG CHUNG ADMIN */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #ff5722;
+  color: white;
+}
+
+/* Bảng Quản lý đơn hàng */
+.order-table th:nth-child(1),
+.order-table td:nth-child(1) {
+  width: 10%;
+  min-width: 80px;
+}
+
+/* Bảng Quản lý sản phẩm & Feedback */
+.product-management-table th,
+.product-management-table td,
+.feedback-table th,
+.feedback-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+/* --------------------------- */
+/* NÚT HÀNH ĐỘNG ADMIN */
+.action-btn,
+.status-btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 3px 2px;
+  min-width: 100px;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Xác nhận đơn */
+.status-btn.confirm {
+  background-color: #28a745;
+  color: white;
+}
+.status-btn.confirm:hover {
+  background-color: #1e7e34;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+/* Hủy đơn */
+.action-btn.cancel {
+  background-color: #dc3545;
+  color: white;
+}
+.action-btn.cancel:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+}
+
+/* Sửa */
+.action-btn.edit {
+  background-color: #ff9800;
+  color: white;
+}
+.action-btn.edit:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.4);
+}
+
+/* Xóa */
+.action-btn.delete {
+  background-color: #f44336;
+  color: white;
+}
+.action-btn.delete:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(244, 67, 54, 0.4);
+}
+
+/* --------------------------- */
+/* FORM QUẢN LÝ SẢN PHẨM */
+#productForm {
+  background: #fff8f2;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px dashed #ff7043;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.form-group button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.form-group button:hover {
+  opacity: 0.85;
+}
+
+/* Hủy edit */
+#cancelEdit {
+  background-color: #6c757d !important;
+  color: white;
+}
+#cancelEdit:hover {
+  background-color: #5a6268 !important;
+}

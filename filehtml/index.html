@@ -1,83 +1,103 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="../filecss/index.css">
+    <link rel="stylesheet" href="../filecss/index.css" />
     <script src="../filejs/auth.js"></script>
     <script src="../filejs/chuyendoi.js"></script>
-</head>
-<body onload="checkAuth()">
-
+  </head>
+  <body onload="checkAuth()">
     <!-- HEADER -->
     <header class="header">
-        <h1>🛍️ Cửa hàng trực tuyến</h1>
+      <h1>🛍️ Cửa hàng trực tuyến</h1>
 
-        <!-- Search -->
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
-            <button onclick="searchProduct()">Tìm</button>
-        </div>
+      <!-- Search -->
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Tìm kiếm sản phẩm..."
+        />
+        <button onclick="searchProduct()">Tìm</button>
+      </div>
 
-        <!-- Auth Buttons -->
-        <div class="auth-actions">
-            <button onclick="goAdmin()" id="adminBtn" class="logout-btn" style="display:none;">Admin</button>
-            <button onclick="goLogin()" id="loginBtn" class="logout-btn">Đăng nhập</button>
-            <button onclick="handleLogout()" id="logoutBtn" class="logout-btn" style="display:none;">Đăng xuất</button>
-        </div>
+      <!-- Auth Buttons -->
+      <div class="auth-actions">
+        <button
+          onclick="goAdmin()"
+          id="adminBtn"
+          class="logout-btn"
+          style="display: none"
+        >
+          Admin
+        </button>
+        <button onclick="goLogin()" id="loginBtn" class="logout-btn">
+          Đăng nhập
+        </button>
+        <button
+          onclick="handleLogout()"
+          id="logoutBtn"
+          class="logout-btn"
+          style="display: none"
+        >
+          Đăng xuất
+        </button>
+      </div>
     </header>
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="active">🏠 Trang chủ</a>
-        <a href="giohang.html">🛒 Giỏ hàng</a>
-        <a href="GDND.html">👤 Người dùng</a>
+      <a href="index.html" class="active">🏠 Trang chủ</a>
+      <a href="giohang.html">🛒 Giỏ hàng</a>
+      <a href="GDND.html">👤 Người dùng</a>
 
-        <div class="sort-filter-group">
-            <!-- Sort by price -->
-            <label for="sort-price" class="sort-label">Sắp xếp theo:</label>
-            <select id="sort-price" onchange="sortProducts()">
-                <option value="">Giá (Mặc định)</option>
-                <option value="asc">Giá (Tăng dần)</option>
-                <option value="desc">Giá (Giảm dần)</option>
-            </select>
+      <div class="sort-filter-group">
+        <!-- Sort by price -->
+        <label for="sort-price" class="sort-label">Sắp xếp theo:</label>
+        <select id="sort-price" onchange="sortProducts()">
+          <option value="">Giá (Mặc định)</option>
+          <option value="asc">Giá (Tăng dần)</option>
+          <option value="desc">Giá (Giảm dần)</option>
+        </select>
 
-            <!-- Filter by price range -->
-            <label for="filter-price-range" class="sort-label">Khoảng giá:</label>
-            <select id="filter-price-range" onchange="filterProducts()">
-                <option value="">Tất cả</option>
-                <option value="low">Dưới 3.000.000₫</option>
-                <option value="high">Trên 3.000.000₫</option>
-            </select>
+        <!-- Filter by price range -->
+        <label for="filter-price-range" class="sort-label">Khoảng giá:</label>
+        <select id="filter-price-range" onchange="filterProducts()">
+          <option value="">Tất cả</option>
+          <option value="low">Dưới 3.000.000₫</option>
+          <option value="high">Trên 3.000.000₫</option>
+        </select>
 
-            <!-- Filter buttons -->
-            <button class="filter-btn" onclick="filterProducts('popular')">Được mua nhiều</button>
-            <button class="filter-btn" onclick="filterProducts('newest')">Mới nhất</button>
-        </div>
+        <!-- Filter buttons -->
+        <button class="filter-btn" onclick="filterProducts('popular')">
+          Được mua nhiều
+        </button>
+        <button class="filter-btn" onclick="filterProducts('newest')">
+          Mới nhất
+        </button>
+      </div>
     </nav>
 
     <!-- MAIN CONTENT -->
     <main class="main-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h3>📂 Danh mục</h3>
+        <ul class="category-list">
+          <li onclick="filterCategory('Điện thoại')">📱 Điện thoại</li>
+          <li onclick="filterCategory('Laptop')">💻 Laptop</li>
+          <li onclick="filterCategory('Âm thanh')">🎧 Âm thanh</li>
+          <li onclick="filterCategory('Đồng hồ')">⌚ Đồng hồ</li>
+          <li onclick="filterCategory('Phụ kiện')">🔌 Phụ kiện</li>
+          <li onclick="filterCategory('Gia dụng')">🏠 Gia dụng</li>
+          <li onclick="showAll()">🌐 Tất cả</li>
+        </ul>
+      </aside>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <h3>📂 Danh mục</h3>
-            <ul class="category-list">
-                <li onclick="filterCategory('Điện thoại')">📱 Điện thoại</li>
-                <li onclick="filterCategory('Laptop')">💻 Laptop</li>
-                <li onclick="filterCategory('Âm thanh')">🎧 Âm thanh</li>
-                <li onclick="filterCategory('Đồng hồ')">⌚ Đồng hồ</li>
-                <li onclick="filterCategory('Phụ kiện')">🔌 Phụ kiện</li>
-                <li onclick="filterCategory('Gia dụng')">🏠 Gia dụng</li>
-                <li onclick="showAll()">🌐 Tất cả</li>
-            </ul>
-        </aside>
-
-        <!-- PRODUCT LIST -->
-        <section class="product-list" id="productList"></section>
+      <!-- PRODUCT LIST -->
+      <section class="product-list" id="productList"></section>
     </main>
-
-</body>
+  </body>
 </html>
-
