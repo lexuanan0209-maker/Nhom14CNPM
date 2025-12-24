@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipper Panel</title>
+ 
+  <link rel="stylesheet" href="../filecss/shipper.css">
+  <script src="../filejs/auth.js"></script>
+  <script src="../filejs/chuyendoi.js"></script>
+  <script type="module" src="../filejs/shipper.js"></script>
+ 
+
+
+</head>
+
+
+<body class="shipper-body">
+    <header class="header">
+        <h1>🛵 SHIPPER PANEL</h1>
+        <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
+    </header>
+   
+    <main class="shipper-container">
+        <h2>Quản lý Vận chuyển</h2> <!-- Bỏ chữ & Feedback -->
+
+
+        <div class="shipper-tabs">
+            <button onclick="changeShipperTab('pending')" class="tab-btn active" id="tabPendingOrders">
+                🛵 Đơn hàng CHỜ LẤY
+            </button>
+            <button onclick="changeShipperTab('shipping')" class="tab-btn" id="tabShippingOrders">
+                🚚 Đơn hàng ĐANG GIAO
+            </button>
+            <button onclick="changeShipperTab('completed')" class="tab-btn" id="tabCompletedOrders">
+                ✅ Đã HOÀN TẤT
+            </button>
+        </div>
+       
+        <div id="shipperOrderList" class="tab-content">
+            <p>Đang tải đơn hàng...</p>
+        </div>
+
+
+       
+    </main>
+   
+</body>
+</html>
