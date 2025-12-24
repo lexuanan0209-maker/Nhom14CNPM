@@ -1,12 +1,18 @@
 // chuyendoi.js - QUẢN LÝ SẢN PHẨM, LỌC, SẮP XẾP, GIỎ HÀNG
 
 // DỮ LIỆU SẢN PHẨM
-const products = [
-    { id: 1, name: "Điện thoại Samsung Galaxy S23", price: "21990000", img: "/images/dt23.jpg", category: "Điện thoại", origin: "Hàn Quốc", sold: 1532, rate: 4.8 },
-    { id: 2, name: "Điện thoại iPhone 15 Pro Max", price: "30990000", img: "https://cdn.tgdd.vn/Products/Images/42/281570/iphone-15-pro-max-thumb-600x600.jpg", category: "Điện thoại", origin: "Mỹ", sold: 2541, rate: 4.9 },
-    { id: 3, name: "Xiaomi 13T Pro", price: "16990000", img: "https://cdn.tgdd.vn/Products/Images/42/306782/xiaomi-13t-pro-thumb-600x600.jpg", category: "Điện thoại", origin: "Trung Quốc", sold: 850, rate: 4.7 },
-    { id: 53, name: "Nồi chiên không dầu Lock&Lock", price: "2490000", img: "https://cdn.tgdd.vn/Products/Images/4619/236968/camera-hanh-trinh-vietmap-c61-pro-thumb-600x600.jpg", category: "Gia dụng", origin: "Hàn Quốc", sold: 1500, rate: 4.6 }
-];
+let products = [];
+
+async function loadProductsFromServer() {
+    try {
+        const res = await fetch("http://localhost:3000/api/products");
+        products = await res.json();
+        currentProducts = [...products];
+        applyFiltersAndSorts();
+    } catch (err) {
+        console.error("Lỗi load sản phẩm:", err);
+    }
+}
 
 // DANH SÁCH SẢN PHẨM ĐANG HIỂN THỊ
 let currentProducts = [...products];
@@ -29,9 +35,9 @@ window.getCurrentUserKey = getCurrentUserKey;
 
 // LẤY DANH SÁCH SẢN PHẨM MỚI NHẤT
 function getSourceProducts() {
-    const storedProducts = localStorage.getItem('updatedProducts');
-    return storedProducts ? JSON.parse(storedProducts) : products;
+    return products;
 }
+
 
 // HIỂN THỊ SẢN PHẨM RA GIAO DIỆN
 function showProducts(productsArray) {
@@ -167,6 +173,6 @@ window.updateProductSold = updateProductSold;
 
 // LOAD SẢN PHẨM KHI MỞ TRANG
 document.addEventListener('DOMContentLoaded', () => {
-    currentProducts = [...getSourceProducts()];
-    applyFiltersAndSorts();
+    loadProductsFromServer();
 });
+
