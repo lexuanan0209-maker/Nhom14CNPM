@@ -5,7 +5,7 @@ let products = [];
 
 async function loadProductsFromServer() {
     try {
-        const res = await fetch("http://localhost:3000/api/products");
+        const res = await fetch("http://localhost:3000/products");
         products = await res.json();
         currentProducts = [...products];
         applyFiltersAndSorts();
@@ -140,7 +140,7 @@ function addToCart(productId) {
     if (!currentUser) { alert("Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!"); return; }
 
     const cartKey = getCurrentUserKey('cart');
-    const product = getSourceProducts().find(p => p.id === productId);
+    const product = getSourceProducts().find(p => p.id == productId);
     if (!product) { alert("Sản phẩm không tồn tại!"); return; }
 
     let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
@@ -160,16 +160,24 @@ function addToCart(productId) {
 window.addToCart = addToCart;
 
 // CẬP NHẬT SỐ LƯỢNG ĐÃ BÁN
-function updateProductSold(productId, quantity = 1) {
-    let productsToUpdate = getSourceProducts();
-    const product = productsToUpdate.find(p => p.id === productId);
-    if (!product) { console.error(`Sản phẩm với ID ${productId} không tồn tại.`); return false; }
+async function updateProductSold(productId, quantity = 1) {
+    const product = products.find(p => p.id == productId);
+    if (!product) return false;
 
-    product.sold += quantity;
-    localStorage.setItem('updatedProducts', JSON.stringify(productsToUpdate));
+    const updatedSold = product.sold + quantity;
+
+    await fetch(`http://localhost:3000/products/${productId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sold: updatedSold })
+    });
+
+    product.sold = updatedSold;
+    applyFiltersAndSorts();
     return true;
 }
 window.updateProductSold = updateProductSold;
+
 
 // LOAD SẢN PHẨM KHI MỞ TRANG
 document.addEventListener('DOMContentLoaded', () => {

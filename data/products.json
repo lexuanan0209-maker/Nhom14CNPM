@@ -1,22 +1,1224 @@
-[
-  {
-    "id": 1766407169718,
-    "name": "11",
-    "price": "1",
-    "image": "https://tse1.mm.bing.net/th/id/OIP.NJJC0T8dYoFsgExhJ5PnzgHaFE?pid=Api",
-    "category": "điện thoại",
-    "origin": "trung quoc",
-    "sold": 0,
-    "rate": 5
-  },
-  {
-    "id": 1766408213290,
-    "name": "aa",
-    "price": "11",
-    "image": "https://sf-static.upanhlaylink.com/view/image_2025122249288e274967975bd3d903e762df104e.jpg",
-    "category": "điện thoại",
-    "origin": "trung quoc",
-    "sold": 0,
-    "rate": 5
-  }
-]
+{
+  "products": [
+    {
+      "id": "1001",
+      "name": "iPhone 11",
+      "price": "10990000",
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQvLGrBUJcyAdJDhDQ4wXEVO2G__kMI5uMhwkpOSqXXIqv9tfVFh03ps28t-FDhAc_w_VucQPC-hMOnfDOXRuIF5OlzHiBjQBwwlYNCre7v7EKCCVc9SvkM6cEamw3Fe-iZfdDF6Q&usqp=CAc",
+      "category": "Điện thoại",
+      "origin": "USA",
+      "sold": 322,
+      "rate": 4.8
+    },
+    {
+      "id": "1002",
+      "name": "iPhone 12",
+      "price": "12990000",
+      "img": "https://via.placeholder.com/300?text=iPhone+12",
+      "category": "Điện thoại",
+      "origin": "USA",
+      "sold": 281,
+      "rate": 4.7
+    },
+    {
+      "id": "1003",
+      "name": "Samsung Galaxy A14",
+      "price": "3490000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+A14",
+      "category": "Điện thoại",
+      "origin": "Hàn Quốc",
+      "sold": 210,
+      "rate": 4.4
+    },
+    {
+      "id": "1004",
+      "name": "Samsung Galaxy S23",
+      "price": "19990000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+S23",
+      "category": "Điện thoại",
+      "origin": "Hàn Quốc",
+      "sold": 180,
+      "rate": 4.9
+    },
+    {
+      "id": "1005",
+      "name": "Xiaomi Redmi 12",
+      "price": "2990000",
+      "img": "https://via.placeholder.com/300?text=Redmi+12",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 260,
+      "rate": 4.3
+    },
+    {
+      "id": "1006",
+      "name": "Xiaomi Note 12",
+      "price": "3990000",
+      "img": "https://via.placeholder.com/300?text=Note+12",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 231,
+      "rate": 4.4
+    },
+    {
+      "id": "1007",
+      "name": "OPPO A57",
+      "price": "4290000",
+      "img": "https://via.placeholder.com/300?text=OPPO+A57",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 140,
+      "rate": 4.2
+    },
+    {
+      "id": "1008",
+      "name": "OPPO Reno 8",
+      "price": "8990000",
+      "img": "https://via.placeholder.com/300?text=Reno+8",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 160,
+      "rate": 4.5
+    },
+    {
+      "id": "1009",
+      "name": "Vivo Y20",
+      "price": "3790000",
+      "img": "https://via.placeholder.com/300?text=Vivo+Y20",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 190,
+      "rate": 4.1
+    },
+    {
+      "id": "1010",
+      "name": "Vivo Y22s",
+      "price": "4590000",
+      "img": "https://via.placeholder.com/300?text=Y22s",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 170,
+      "rate": 4.2
+    },
+    {
+      "id": "1011",
+      "name": "Realme C55",
+      "price": "4690000",
+      "img": "https://via.placeholder.com/300?text=Realme+C55",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 150,
+      "rate": 4.3
+    },
+    {
+      "id": "1012",
+      "name": "Realme 10",
+      "price": "5990000",
+      "img": "https://via.placeholder.com/300?text=Realme+10",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 140,
+      "rate": 4.4
+    },
+    {
+      "id": "1013",
+      "name": "Nokia G21",
+      "price": "3190000",
+      "img": "https://via.placeholder.com/300?text=Nokia+G21",
+      "category": "Điện thoại",
+      "origin": "Phần Lan",
+      "sold": 120,
+      "rate": 4
+    },
+    {
+      "id": "1014",
+      "name": "Nokia C32",
+      "price": "2790000",
+      "img": "https://via.placeholder.com/300?text=Nokia+C32",
+      "category": "Điện thoại",
+      "origin": "Phần Lan",
+      "sold": 100,
+      "rate": 3.9
+    },
+    {
+      "id": "1015",
+      "name": "iPhone SE 2022",
+      "price": "9990000",
+      "img": "https://via.placeholder.com/300?text=iPhone+SE",
+      "category": "Điện thoại",
+      "origin": "USA",
+      "sold": 130,
+      "rate": 4.6
+    },
+    {
+      "id": "1016",
+      "name": "Samsung Galaxy A24",
+      "price": "4890000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+A24",
+      "category": "Điện thoại",
+      "origin": "Hàn Quốc",
+      "sold": 165,
+      "rate": 4.4
+    },
+    {
+      "id": "1017",
+      "name": "Xiaomi Poco M5",
+      "price": "3690000",
+      "img": "https://via.placeholder.com/300?text=Poco+M5",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 175,
+      "rate": 4.3
+    },
+    {
+      "id": "1018",
+      "name": "OPPO A17",
+      "price": "3290000",
+      "img": "https://via.placeholder.com/300?text=OPPO+A17",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 145,
+      "rate": 4.1
+    },
+    {
+      "id": "1019",
+      "name": "Vivo Y02",
+      "price": "2590000",
+      "img": "https://via.placeholder.com/300?text=Vivo+Y02",
+      "category": "Điện thoại",
+      "origin": "Trung Quốc",
+      "sold": 135,
+      "rate": 4
+    },
+    {
+      "id": "1020",
+      "name": "Samsung Galaxy Z Flip",
+      "price": "18990000",
+      "img": "https://via.placeholder.com/300?text=Z+Flip",
+      "category": "Điện thoại",
+      "origin": "Hàn Quốc",
+      "sold": 90,
+      "rate": 4.7
+    },
+    {
+      "id": "2001",
+      "name": "Laptop Acer Aspire 3",
+      "price": "12990000",
+      "img": "https://via.placeholder.com/300?text=Acer+Aspire+3",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 80,
+      "rate": 4.4
+    },
+    {
+      "id": "2002",
+      "name": "Laptop HP 15s",
+      "price": "13990000",
+      "img": "https://via.placeholder.com/300?text=HP+15s",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 110,
+      "rate": 4.6
+    },
+    {
+      "id": "2003",
+      "name": "Laptop Dell Inspiron 3520",
+      "price": "15990000",
+      "img": "https://via.placeholder.com/300?text=Dell+3520",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 130,
+      "rate": 4.7
+    },
+    {
+      "id": "2004",
+      "name": "Laptop ASUS VivoBook 15",
+      "price": "14990000",
+      "img": "https://via.placeholder.com/300?text=VivoBook+15",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 90,
+      "rate": 4.5
+    },
+    {
+      "id": "2005",
+      "name": "Laptop Lenovo IdeaPad 3",
+      "price": "13490000",
+      "img": "https://via.placeholder.com/300?text=IdeaPad+3",
+      "category": "Laptop",
+      "origin": "Trung Quốc",
+      "sold": 160,
+      "rate": 4.4
+    },
+    {
+      "id": "2006",
+      "name": "Laptop MSI Modern 14",
+      "price": "16990000",
+      "img": "https://via.placeholder.com/300?text=MSI+Modern+14",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 70,
+      "rate": 4.6
+    },
+    {
+      "id": "2007",
+      "name": "Laptop LG Gram",
+      "price": "28990000",
+      "img": "https://via.placeholder.com/300?text=LG+Gram",
+      "category": "Laptop",
+      "origin": "Hàn Quốc",
+      "sold": 60,
+      "rate": 4.8
+    },
+    {
+      "id": "2008",
+      "name": "Laptop MacBook Air M1",
+      "price": "18990000",
+      "img": "https://via.placeholder.com/300?text=MacBook+Air+M1",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 200,
+      "rate": 4.9
+    },
+    {
+      "id": "2009",
+      "name": "Laptop MacBook Pro M2",
+      "price": "32990000",
+      "img": "https://via.placeholder.com/300?text=MacBook+Pro+M2",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 120,
+      "rate": 4.9
+    },
+    {
+      "id": "2010",
+      "name": "Laptop ASUS TUF Gaming",
+      "price": "19990000",
+      "img": "https://via.placeholder.com/300?text=ASUS+TUF",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 140,
+      "rate": 4.6
+    },
+    {
+      "id": "2011",
+      "name": "Laptop Dell XPS 13",
+      "price": "25990000",
+      "img": "https://via.placeholder.com/300?text=Dell+XPS+13",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 95,
+      "rate": 4.8
+    },
+    {
+      "id": "2012",
+      "name": "Laptop HP Pavilion",
+      "price": "17990000",
+      "img": "https://via.placeholder.com/300?text=HP+Pavilion",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 125,
+      "rate": 4.5
+    },
+    {
+      "id": "2013",
+      "name": "Laptop Lenovo ThinkPad E14",
+      "price": "18990000",
+      "img": "https://via.placeholder.com/300?text=ThinkPad+E14",
+      "category": "Laptop",
+      "origin": "Trung Quốc",
+      "sold": 110,
+      "rate": 4.7
+    },
+    {
+      "id": "2014",
+      "name": "Laptop Acer Nitro 5",
+      "price": "21990000",
+      "img": "https://via.placeholder.com/300?text=Nitro+5",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 155,
+      "rate": 4.6
+    },
+    {
+      "id": "2015",
+      "name": "Laptop ASUS ZenBook",
+      "price": "23990000",
+      "img": "https://via.placeholder.com/300?text=ZenBook",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 100,
+      "rate": 4.8
+    },
+    {
+      "id": "2016",
+      "name": "Laptop Samsung Galaxy Book",
+      "price": "20990000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+Book",
+      "category": "Laptop",
+      "origin": "Hàn Quốc",
+      "sold": 85,
+      "rate": 4.6
+    },
+    {
+      "id": "2017",
+      "name": "Laptop MSI GF63",
+      "price": "18990000",
+      "img": "https://via.placeholder.com/300?text=MSI+GF63",
+      "category": "Laptop",
+      "origin": "Đài Loan",
+      "sold": 145,
+      "rate": 4.5
+    },
+    {
+      "id": "2018",
+      "name": "Laptop Lenovo Legion 5",
+      "price": "25990000",
+      "img": "https://via.placeholder.com/300?text=Legion+5",
+      "category": "Laptop",
+      "origin": "Trung Quốc",
+      "sold": 165,
+      "rate": 4.7
+    },
+    {
+      "id": "2019",
+      "name": "Laptop Dell Vostro",
+      "price": "14990000",
+      "img": "https://via.placeholder.com/300?text=Dell+Vostro",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 115,
+      "rate": 4.4
+    },
+    {
+      "id": "2020",
+      "name": "Laptop HP Envy",
+      "price": "24990000",
+      "img": "https://via.placeholder.com/300?text=HP+Envy",
+      "category": "Laptop",
+      "origin": "USA",
+      "sold": 90,
+      "rate": 4.7
+    },
+    {
+      "id": "3001",
+      "name": "Tai nghe AirPods 2",
+      "price": "2990000",
+      "img": "https://via.placeholder.com/300?text=AirPods+2",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 400,
+      "rate": 4.7
+    },
+    {
+      "id": "3002",
+      "name": "Tai nghe AirPods Pro",
+      "price": "4990000",
+      "img": "https://via.placeholder.com/300?text=AirPods+Pro",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 350,
+      "rate": 4.9
+    },
+    {
+      "id": "3003",
+      "name": "Tai nghe Sony WH-1000XM5",
+      "price": "7990000",
+      "img": "https://via.placeholder.com/300?text=Sony+XM5",
+      "category": "Âm thanh",
+      "origin": "Nhật Bản",
+      "sold": 180,
+      "rate": 4.9
+    },
+    {
+      "id": "3004",
+      "name": "Loa JBL Charge 5",
+      "price": "3790000",
+      "img": "https://via.placeholder.com/300?text=JBL+Charge+5",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 260,
+      "rate": 4.6
+    },
+    {
+      "id": "3005",
+      "name": "Loa JBL Flip 6",
+      "price": "2990000",
+      "img": "https://via.placeholder.com/300?text=JBL+Flip+6",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 240,
+      "rate": 4.5
+    },
+    {
+      "id": "3006",
+      "name": "Tai nghe Samsung Buds 2",
+      "price": "2490000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+Buds+2",
+      "category": "Âm thanh",
+      "origin": "Hàn Quốc",
+      "sold": 210,
+      "rate": 4.4
+    },
+    {
+      "id": "3007",
+      "name": "Tai nghe Sony WF-C500",
+      "price": "1790000",
+      "img": "https://via.placeholder.com/300?text=Sony+WF-C500",
+      "category": "Âm thanh",
+      "origin": "Nhật Bản",
+      "sold": 190,
+      "rate": 4.3
+    },
+    {
+      "id": "3008",
+      "name": "Loa Bluetooth Xiaomi",
+      "price": "990000",
+      "img": "https://via.placeholder.com/300?text=Xiaomi+Speaker",
+      "category": "Âm thanh",
+      "origin": "Trung Quốc",
+      "sold": 300,
+      "rate": 4.2
+    },
+    {
+      "id": "3009",
+      "name": "Tai nghe Logitech G733",
+      "price": "3490000",
+      "img": "https://via.placeholder.com/300?text=Logitech+G733",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 140,
+      "rate": 4.6
+    },
+    {
+      "id": "3010",
+      "name": "Loa Soundbar Samsung",
+      "price": "6990000",
+      "img": "https://via.placeholder.com/300?text=Samsung+Soundbar",
+      "category": "Âm thanh",
+      "origin": "Hàn Quốc",
+      "sold": 120,
+      "rate": 4.7
+    },
+    {
+      "id": "3011",
+      "name": "Tai nghe JBL Tune 510",
+      "price": "1290000",
+      "img": "https://via.placeholder.com/300?text=JBL+Tune+510",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 220,
+      "rate": 4.2
+    },
+    {
+      "id": "3012",
+      "name": "Tai nghe Beats Studio",
+      "price": "5990000",
+      "img": "https://via.placeholder.com/300?text=Beats+Studio",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 160,
+      "rate": 4.6
+    },
+    {
+      "id": "3013",
+      "name": "Loa Marshall Acton",
+      "price": "7490000",
+      "img": "https://via.placeholder.com/300?text=Marshall+Acton",
+      "category": "Âm thanh",
+      "origin": "Anh",
+      "sold": 110,
+      "rate": 4.8
+    },
+    {
+      "id": "3014",
+      "name": "Loa Sony SRS-XB43",
+      "price": "5490000",
+      "img": "https://via.placeholder.com/300?text=Sony+XB43",
+      "category": "Âm thanh",
+      "origin": "Nhật Bản",
+      "sold": 130,
+      "rate": 4.7
+    },
+    {
+      "id": "3015",
+      "name": "Tai nghe HyperX Cloud II",
+      "price": "2490000",
+      "img": "https://via.placeholder.com/300?text=HyperX+Cloud+II",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 170,
+      "rate": 4.6
+    },
+    {
+      "id": "3016",
+      "name": "Tai nghe Razer BlackShark",
+      "price": "2990000",
+      "img": "https://via.placeholder.com/300?text=Razer+BlackShark",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 155,
+      "rate": 4.5
+    },
+    {
+      "id": "3017",
+      "name": "Loa Bluetooth Anker",
+      "price": "1890000",
+      "img": "https://via.placeholder.com/300?text=Anker+Speaker",
+      "category": "Âm thanh",
+      "origin": "USA",
+      "sold": 210,
+      "rate": 4.4
+    },
+    {
+      "id": "3018",
+      "name": "Tai nghe SoundPEATS",
+      "price": "990000",
+      "img": "https://via.placeholder.com/300?text=SoundPEATS",
+      "category": "Âm thanh",
+      "origin": "Trung Quốc",
+      "sold": 260,
+      "rate": 4.2
+    },
+    {
+      "id": "3019",
+      "name": "Loa Edifier R1280",
+      "price": "2890000",
+      "img": "https://via.placeholder.com/300?text=Edifier+R1280",
+      "category": "Âm thanh",
+      "origin": "Trung Quốc",
+      "sold": 145,
+      "rate": 4.5
+    },
+    {
+      "id": "3020",
+      "name": "Tai nghe Baseus Bowie",
+      "price": "1190000",
+      "img": "https://via.placeholder.com/300?text=Baseus+Bowie",
+      "category": "Âm thanh",
+      "origin": "Trung Quốc",
+      "sold": 230,
+      "rate": 4.3
+    },
+    {
+      "id": "4001",
+      "name": "Apple Watch Series 8",
+      "price": "9990000",
+      "img": "https://via.placeholder.com/300?text=Apple+Watch+8",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 220,
+      "rate": 4.8
+    },
+    {
+      "id": "4002",
+      "name": "Apple Watch SE",
+      "price": "6990000",
+      "img": "https://via.placeholder.com/300?text=Apple+Watch+SE",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 260,
+      "rate": 4.7
+    },
+    {
+      "id": "4003",
+      "name": "Samsung Galaxy Watch 5",
+      "price": "7490000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+Watch+5",
+      "category": "Đồng hồ",
+      "origin": "Hàn Quốc",
+      "sold": 180,
+      "rate": 4.6
+    },
+    {
+      "id": "4004",
+      "name": "Xiaomi Watch S1",
+      "price": "3990000",
+      "img": "https://via.placeholder.com/300?text=Xiaomi+Watch+S1",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 210,
+      "rate": 4.4
+    },
+    {
+      "id": "4005",
+      "name": "Huawei Watch GT 3",
+      "price": "5490000",
+      "img": "https://via.placeholder.com/300?text=Huawei+GT+3",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 195,
+      "rate": 4.5
+    },
+    {
+      "id": "4006",
+      "name": "Amazfit GTS 4",
+      "price": "3490000",
+      "img": "https://via.placeholder.com/300?text=Amazfit+GTS+4",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 170,
+      "rate": 4.4
+    },
+    {
+      "id": "4007",
+      "name": "Garmin Forerunner 55",
+      "price": "4990000",
+      "img": "https://via.placeholder.com/300?text=Garmin+55",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 140,
+      "rate": 4.6
+    },
+    {
+      "id": "4008",
+      "name": "Garmin Venu Sq",
+      "price": "6290000",
+      "img": "https://via.placeholder.com/300?text=Garmin+Venu+Sq",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 130,
+      "rate": 4.7
+    },
+    {
+      "id": "4009",
+      "name": "Samsung Galaxy Watch Active 2",
+      "price": "5990000",
+      "img": "https://via.placeholder.com/300?text=Active+2",
+      "category": "Đồng hồ",
+      "origin": "Hàn Quốc",
+      "sold": 160,
+      "rate": 4.6
+    },
+    {
+      "id": "4010",
+      "name": "Xiaomi Mi Band 8",
+      "price": "1290000",
+      "img": "https://via.placeholder.com/300?text=Mi+Band+8",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 320,
+      "rate": 4.3
+    },
+    {
+      "id": "4011",
+      "name": "Huawei Band 8",
+      "price": "1190000",
+      "img": "https://via.placeholder.com/300?text=Huawei+Band+8",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 300,
+      "rate": 4.2
+    },
+    {
+      "id": "4012",
+      "name": "Amazfit Bip U Pro",
+      "price": "1690000",
+      "img": "https://via.placeholder.com/300?text=Amazfit+Bip+U",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 240,
+      "rate": 4.3
+    },
+    {
+      "id": "4013",
+      "name": "Garmin Instinct",
+      "price": "6990000",
+      "img": "https://via.placeholder.com/300?text=Garmin+Instinct",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 110,
+      "rate": 4.7
+    },
+    {
+      "id": "4014",
+      "name": "Apple Watch Ultra",
+      "price": "19990000",
+      "img": "https://via.placeholder.com/300?text=Apple+Watch+Ultra",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 90,
+      "rate": 4.9
+    },
+    {
+      "id": "4015",
+      "name": "Samsung Galaxy Watch 6",
+      "price": "8290000",
+      "img": "https://via.placeholder.com/300?text=Galaxy+Watch+6",
+      "category": "Đồng hồ",
+      "origin": "Hàn Quốc",
+      "sold": 150,
+      "rate": 4.7
+    },
+    {
+      "id": "4016",
+      "name": "Xiaomi Redmi Watch 3",
+      "price": "2490000",
+      "img": "https://via.placeholder.com/300?text=Redmi+Watch+3",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 200,
+      "rate": 4.4
+    },
+    {
+      "id": "4017",
+      "name": "Huawei Watch Fit",
+      "price": "2890000",
+      "img": "https://via.placeholder.com/300?text=Huawei+Watch+Fit",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 210,
+      "rate": 4.5
+    },
+    {
+      "id": "4018",
+      "name": "Garmin Lily",
+      "price": "5990000",
+      "img": "https://via.placeholder.com/300?text=Garmin+Lily",
+      "category": "Đồng hồ",
+      "origin": "USA",
+      "sold": 95,
+      "rate": 4.6
+    },
+    {
+      "id": "4019",
+      "name": "Amazfit T-Rex 2",
+      "price": "4790000",
+      "img": "https://via.placeholder.com/300?text=T-Rex+2",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 135,
+      "rate": 4.6
+    },
+    {
+      "id": "4020",
+      "name": "Xiaomi Watch 2 Pro",
+      "price": "5990000",
+      "img": "https://via.placeholder.com/300?text=Xiaomi+Watch+2+Pro",
+      "category": "Đồng hồ",
+      "origin": "Trung Quốc",
+      "sold": 125,
+      "rate": 4.5
+    },
+    {
+      "id": "5001",
+      "name": "Sạc nhanh 20W Apple",
+      "price": "590000",
+      "img": "https://via.placeholder.com/300?text=Apple+20W",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 420,
+      "rate": 4.7
+    },
+    {
+      "id": "5002",
+      "name": "Cáp Lightning Apple",
+      "price": "490000",
+      "img": "https://via.placeholder.com/300?text=Lightning+Cable",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 380,
+      "rate": 4.6
+    },
+    {
+      "id": "5003",
+      "name": "Củ sạc Samsung 25W",
+      "price": "390000",
+      "img": "https://via.placeholder.com/300?text=Samsung+25W",
+      "category": "Phụ kiện",
+      "origin": "Hàn Quốc",
+      "sold": 360,
+      "rate": 4.5
+    },
+    {
+      "id": "5004",
+      "name": "Pin sạc dự phòng Xiaomi 10000mAh",
+      "price": "490000",
+      "img": "https://via.placeholder.com/300?text=Power+Bank+Xiaomi",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 410,
+      "rate": 4.4
+    },
+    {
+      "id": "5005",
+      "name": "Chuột Logitech M331",
+      "price": "390000",
+      "img": "https://via.placeholder.com/300?text=Logitech+M331",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 290,
+      "rate": 4.6
+    },
+    {
+      "id": "5006",
+      "name": "Bàn phím Logitech K380",
+      "price": "690000",
+      "img": "https://via.placeholder.com/300?text=Logitech+K380",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 250,
+      "rate": 4.7
+    },
+    {
+      "id": "5007",
+      "name": "Chuột Gaming Razer",
+      "price": "990000",
+      "img": "https://via.placeholder.com/300?text=Razer+Mouse",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 180,
+      "rate": 4.6
+    },
+    {
+      "id": "5008",
+      "name": "Bàn phím cơ DareU",
+      "price": "890000",
+      "img": "https://via.placeholder.com/300?text=DareU+Keyboard",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 210,
+      "rate": 4.4
+    },
+    {
+      "id": "5009",
+      "name": "Tai nghe có dây Sony",
+      "price": "590000",
+      "img": "https://via.placeholder.com/300?text=Sony+Wired",
+      "category": "Phụ kiện",
+      "origin": "Nhật Bản",
+      "sold": 240,
+      "rate": 4.3
+    },
+    {
+      "id": "5010",
+      "name": "Giá đỡ laptop nhôm",
+      "price": "290000",
+      "img": "https://via.placeholder.com/300?text=Laptop+Stand",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 310,
+      "rate": 4.2
+    },
+    {
+      "id": "5011",
+      "name": "USB Sandisk 64GB",
+      "price": "290000",
+      "img": "https://via.placeholder.com/300?text=Sandisk+64GB",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 330,
+      "rate": 4.5
+    },
+    {
+      "id": "5012",
+      "name": "Ổ cứng SSD Kingston 500GB",
+      "price": "990000",
+      "img": "https://via.placeholder.com/300?text=Kingston+SSD",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 200,
+      "rate": 4.6
+    },
+    {
+      "id": "5013",
+      "name": "Webcam Logitech C270",
+      "price": "690000",
+      "img": "https://via.placeholder.com/300?text=Logitech+C270",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 175,
+      "rate": 4.4
+    },
+    {
+      "id": "5014",
+      "name": "Balo laptop chống sốc",
+      "price": "490000",
+      "img": "https://via.placeholder.com/300?text=Laptop+Bag",
+      "category": "Phụ kiện",
+      "origin": "Việt Nam",
+      "sold": 260,
+      "rate": 4.3
+    },
+    {
+      "id": "5015",
+      "name": "Miếng dán màn hình iPhone",
+      "price": "190000",
+      "img": "https://via.placeholder.com/300?text=Screen+Protector",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 400,
+      "rate": 4.1
+    },
+    {
+      "id": "5016",
+      "name": "Ốp lưng iPhone silicon",
+      "price": "290000",
+      "img": "https://via.placeholder.com/300?text=Phone+Case",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 420,
+      "rate": 4.2
+    },
+    {
+      "id": "5017",
+      "name": "Hub chuyển USB-C",
+      "price": "590000",
+      "img": "https://via.placeholder.com/300?text=USB-C+Hub",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 230,
+      "rate": 4.4
+    },
+    {
+      "id": "5018",
+      "name": "Đế tản nhiệt laptop",
+      "price": "390000",
+      "img": "https://via.placeholder.com/300?text=Cooling+Pad",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 280,
+      "rate": 4.3
+    },
+    {
+      "id": "5019",
+      "name": "Chuột không dây Microsoft",
+      "price": "490000",
+      "img": "https://via.placeholder.com/300?text=Microsoft+Mouse",
+      "category": "Phụ kiện",
+      "origin": "USA",
+      "sold": 195,
+      "rate": 4.5
+    },
+    {
+      "id": "5020",
+      "name": "Tai nghe Baseus dây",
+      "price": "390000",
+      "img": "https://via.placeholder.com/300?text=Baseus+Wired",
+      "category": "Phụ kiện",
+      "origin": "Trung Quốc",
+      "sold": 215,
+      "rate": 4.2
+    },
+    {
+      "id": "6001",
+      "name": "Nồi cơm điện Sharp",
+      "price": "1299000",
+      "img": "https://via.placeholder.com/300?text=Sharp+Rice+Cooker",
+      "category": "Gia dụng",
+      "origin": "Nhật Bản",
+      "sold": 180,
+      "rate": 4.5
+    },
+    {
+      "id": "6002",
+      "name": "Nồi chiên không dầu Philips",
+      "price": "3499000",
+      "img": "https://via.placeholder.com/300?text=Philips+Airfryer",
+      "category": "Gia dụng",
+      "origin": "Hà Lan",
+      "sold": 220,
+      "rate": 4.7
+    },
+    {
+      "id": "6003",
+      "name": "Máy hút bụi Xiaomi",
+      "price": "2999000",
+      "img": "https://via.placeholder.com/300?text=Xiaomi+Vacuum",
+      "category": "Gia dụng",
+      "origin": "Trung Quốc",
+      "sold": 200,
+      "rate": 4.4
+    },
+    {
+      "id": "6004",
+      "name": "Máy lọc không khí Sharp",
+      "price": "4999000",
+      "img": "https://via.placeholder.com/300?text=Sharp+Air+Purifier",
+      "category": "Gia dụng",
+      "origin": "Nhật Bản",
+      "sold": 160,
+      "rate": 4.6
+    },
+    {
+      "id": "6005",
+      "name": "Bình đun siêu tốc Philips",
+      "price": "890000",
+      "img": "https://via.placeholder.com/300?text=Philips+Kettle",
+      "category": "Gia dụng",
+      "origin": "Hà Lan",
+      "sold": 240,
+      "rate": 4.5
+    },
+    {
+      "id": "6006",
+      "name": "Máy xay sinh tố Panasonic",
+      "price": "1499000",
+      "img": "https://via.placeholder.com/300?text=Panasonic+Blender",
+      "category": "Gia dụng",
+      "origin": "Nhật Bản",
+      "sold": 190,
+      "rate": 4.4
+    },
+    {
+      "id": "6007",
+      "name": "Quạt điều hòa Sunhouse",
+      "price": "2599000",
+      "img": "https://via.placeholder.com/300?text=Sunhouse+Fan",
+      "category": "Gia dụng",
+      "origin": "Việt Nam",
+      "sold": 170,
+      "rate": 4.3
+    },
+    {
+      "id": "6008",
+      "name": "Bếp từ Kangaroo",
+      "price": "1899000",
+      "img": "https://via.placeholder.com/300?text=Kangaroo+Induction",
+      "category": "Gia dụng",
+      "origin": "Việt Nam",
+      "sold": 210,
+      "rate": 4.4
+    },
+    {
+      "id": "6009",
+      "name": "Lò vi sóng Sharp",
+      "price": "2299000",
+      "img": "https://via.placeholder.com/300?text=Sharp+Microwave",
+      "category": "Gia dụng",
+      "origin": "Nhật Bản",
+      "sold": 155,
+      "rate": 4.5
+    },
+    {
+      "id": "6010",
+      "name": "Máy ép trái cây Philips",
+      "price": "2999000",
+      "img": "https://via.placeholder.com/300?text=Philips+Juicer",
+      "category": "Gia dụng",
+      "origin": "Hà Lan",
+      "sold": 145,
+      "rate": 4.6
+    },
+    {
+      "id": "6011",
+      "name": "Máy sấy tóc Panasonic",
+      "price": "790000",
+      "img": "https://via.placeholder.com/300?text=Panasonic+Hairdryer",
+      "category": "Gia dụng",
+      "origin": "Nhật Bản",
+      "sold": 260,
+      "rate": 4.4
+    },
+    {
+      "id": "6012",
+      "name": "Robot hút bụi Xiaomi",
+      "price": "6999000",
+      "img": "https://via.placeholder.com/300?text=Xiaomi+Robot",
+      "category": "Gia dụng",
+      "origin": "Trung Quốc",
+      "sold": 130,
+      "rate": 4.6
+    },
+    {
+      "id": "6013",
+      "name": "Máy lọc nước Karofi",
+      "price": "5899000",
+      "img": "https://via.placeholder.com/300?text=Karofi+Water",
+      "category": "Gia dụng",
+      "origin": "Việt Nam",
+      "sold": 120,
+      "rate": 4.5
+    },
+    {
+      "id": "6014",
+      "name": "Bàn ủi hơi nước Philips",
+      "price": "1199000",
+      "img": "https://via.placeholder.com/300?text=Philips+Iron",
+      "category": "Gia dụng",
+      "origin": "Hà Lan",
+      "sold": 175,
+      "rate": 4.4
+    },
+    {
+      "id": "6015",
+      "name": "Nồi áp suất điện Sunhouse",
+      "price": "1799000",
+      "img": "https://via.placeholder.com/300?text=Sunhouse+Pressure",
+      "category": "Gia dụng",
+      "origin": "Việt Nam",
+      "sold": 165,
+      "rate": 4.3
+    },
+    {
+      "id": "6016",
+      "name": "Máy pha cà phê Delonghi",
+      "price": "6999000",
+      "img": "https://via.placeholder.com/300?text=Delonghi+Coffee",
+      "category": "Gia dụng",
+      "origin": "Ý",
+      "sold": 95,
+      "rate": 4.7
+    },
+    {
+      "id": "6017",
+      "name": "Máy nước nóng Ariston",
+      "price": "2599000",
+      "img": "https://via.placeholder.com/300?text=Ariston+Heater",
+      "category": "Gia dụng",
+      "origin": "Ý",
+      "sold": 140,
+      "rate": 4.5
+    },
+    {
+      "id": "6018",
+      "name": "Quạt đứng Panasonic",
+      "price": "1899000",
+      "img": "https://via.placeholder.com/300?text=Panasonic+Fan",
+      "category": "Gia dụng",
+      "origin": "Nhật Bản",
+      "sold": 150,
+      "rate": 4.4
+    },
+    {
+      "id": "6019",
+      "name": "Bếp hồng ngoại Sunhouse",
+      "price": "1499000",
+      "img": "https://via.placeholder.com/300?text=Sunhouse+Infrared",
+      "category": "Gia dụng",
+      "origin": "Việt Nam",
+      "sold": 170,
+      "rate": 4.3
+    },
+    {
+      "id": "6020",
+      "name": "Máy xông tinh dầu",
+      "price": "590000",
+      "img": "https://via.placeholder.com/300?text=Aroma+Diffuser",
+      "category": "Gia dụng",
+      "origin": "Trung Quốc",
+      "sold": 280,
+      "rate": 4.2
+    },
+    {
+      "id": "066a",
+      "name": "Bếp Tự Nổ ",
+      "price": "11111111111",
+      "img": "https://storage.googleapis.com/chiaki-central/seller/1749027393324/cloud-image-1749027393324-04062025155633-bep-dien-tu-doi-locknlock-eji326wht-nho-gon-mat-kinh-khoa-an-toan-hen-gio-bao-hanh-2-nam.jpg",
+      "category": "Gia dụng",
+      "origin": "Ấn Độ",
+      "sold": 0,
+      "rate": 5
+    },
+    {
+      "id": "052f",
+      "name": "Bếp Tự Nổ ",
+      "price": "10000000",
+      "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ-UQYl4CewqXwGoQlAkiQSNVPdQRERAwdOmdWFG5XzGXKAa2XXKdp7RmkWyDLt3A7XaHHL_Vrzc-r6f89Z3wdCN0IsqOWnCHwfsSZO8SUBFYNk5ZP9N0y92FRJSQ&usqp=CAc",
+      "category": "Gia dụng",
+      "origin": "Ấn Độ",
+      "sold": 0,
+      "rate": 5
+    }
+  ]
+}

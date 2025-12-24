@@ -1,4 +1,4 @@
-// giohang.js - Gọn, giữ nguyên tính năng
+// giohang.js 
 const ORDER_STORAGE_KEY = 'userOrders';
 
 function getCurrentUserKey(suffix) {
@@ -20,13 +20,15 @@ function loadCart() {
 
     let total = 0;
     cartBody.innerHTML = '';
+    
+    // Tạo nội dung row từng item
     cart.forEach(item => {
         const price = parseInt(item.price.replace(/\D/g, ''));
         const itemTotal = price * item.quantity;
         total += itemTotal;
 
-        cartBody.innerHTML += `
-        <tr>
+        const row = document.createElement('tr');
+        row.innerHTML = `
             <td><img src="${item.img}" class="cart-img"></td>
             <td>${item.name}</td>
             <td>${price.toLocaleString('vi-VN')}₫</td>
@@ -37,16 +39,20 @@ function loadCart() {
             </td>
             <td>${itemTotal.toLocaleString('vi-VN')}₫</td>
             <td><button class="remove-btn" onclick="removeItem(${item.id})">🗑️</button></td>
-        </tr>`;
+        `;
+        cartBody.appendChild(row);
     });
+
     totalPriceEl.textContent = total.toLocaleString('vi-VN');
 }
+
 window.loadCart = loadCart;
 
 function changeQty(id, delta) {
     const cartKey = getCurrentUserKey('cart');
     let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
-    const idx = cart.findIndex(i => i.id === id);
+    const idx = cart.findIndex(i => Number(i.id) === Number(id));
+
     if (idx !== -1) {
         cart[idx].quantity += delta;
         if (cart[idx].quantity <= 0) cart.splice(idx, 1);
@@ -54,36 +60,49 @@ function changeQty(id, delta) {
         loadCart();
     }
 }
+
 window.changeQty = changeQty;
 
 function removeItem(id) {
     const cartKey = getCurrentUserKey('cart');
     let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
-    const newCart = cart.filter(i => i.id !== id);
+    const newCart = cart.filter(i => Number(i.id) !== Number(id));
+
+
     if (newCart.length !== cart.length) {
         localStorage.setItem(cartKey, JSON.stringify(newCart));
         loadCart();
     }
 }
+
 window.removeItem = removeItem;
 
 function checkout() {
     if (!requireLoginFeature()) return;
+
     const cartKey = getCurrentUserKey('cart');
     const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
     const user = JSON.parse(localStorage.getItem('currentUser'));
 
-    if (!cart.length) return alert("Giỏ hàng trống! Vui lòng thêm sản phẩm.");
+    if (!cart.length) {
+        alert("Giỏ hàng trống! Vui lòng thêm sản phẩm.");
+        return;
+    }
 
     let orders = JSON.parse(localStorage.getItem(ORDER_STORAGE_KEY)) || [];
     const nextId = orders.length ? Math.max(...orders.map(o => o.id)) + 1 : 1000;
     const date = new Date().toISOString().substring(0,10);
-    const totalPrice = document.getElementById("totalPrice").textContent.replace(/\D/g,'');
+    const totalPrice = parseInt(document.getElementById("totalPrice").textContent.replace(/\D/g,''));
 
     const newOrder = {
         id: nextId,
         username: user.username,
-        items: cart.map(i => ({id: i.id, name: i.name, quantity: i.quantity, price: i.price})),
+        items: cart.map(i => ({
+            id: i.id,
+            name: i.name,
+            quantity: i.quantity,
+            price: i.price
+        })),
         totalPrice,
         status: 'Chờ xác nhận',
         date
@@ -92,7 +111,9 @@ function checkout() {
     orders.push(newOrder);
     localStorage.setItem(ORDER_STORAGE_KEY, JSON.stringify(orders));
     localStorage.removeItem(cartKey);
+
     alert("🎉 Thanh toán thành công! Đơn hàng đang ở trạng thái 'Chờ xác nhận'.");
     window.location.reload();
 }
+
 window.checkout = checkout;
