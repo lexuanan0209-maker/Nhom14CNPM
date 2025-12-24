@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1766407169718,
+    "name": "11",
+    "price": "1",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.NJJC0T8dYoFsgExhJ5PnzgHaFE?pid=Api",
+    "category": "điện thoại",
+    "origin": "trung quoc",
+    "sold": 0,
+    "rate": 5
+  },
+  {
+    "id": 1766408213290,
+    "name": "aa",
+    "price": "11",
+    "image": "https://sf-static.upanhlaylink.com/view/image_2025122249288e274967975bd3d903e762df104e.jpg",
+    "category": "điện thoại",
+    "origin": "trung quoc",
+    "sold": 0,
+    "rate": 5
+  }
+]
