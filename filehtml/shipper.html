@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipper Panel</title>
+  
+  <link rel="stylesheet" href="../filecss/shipper.css">
+  
+  <script src="../filejs/auth.js"></script>
+  <script src="../filejs/chuyendoi.js"></script>
+  <script type="module" src="../filejs/shipper.js"></script>
+
+
+</head>
+
+<body class="shipper-body"> 
+    <header class="header">
+        <h1>🛵 SHIPPER PANEL</h1>
+        <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
+    </header>
+    
+    <main class="shipper-container">
+        <h2>Quản lý Vận chuyển & Feedback</h2>
+
+        <div class="shipper-tabs">
+            <button onclick="changeShipperTab('pending')" class="tab-btn active" id="tabPendingOrders">
+                🛵 Đơn hàng CHỜ LẤY
+            </button>
+            <button onclick="changeShipperTab('shipping')" class="tab-btn" id="tabShippingOrders">
+                🚚 Đơn hàng ĐANG GIAO
+            </button>
+            <button onclick="changeShipperTab('completed')" class="tab-btn" id="tabCompletedOrders">
+                ✅ Đã HOÀN TẤT
+            </button>
+            <button onclick="changeShipperTab('rating')" class="tab-btn" id="tabRatingSummary">
+                ⭐ ĐÁNH GIÁ CỦA TÔI
+            </button>
+        </div>
+        
+        <div id="shipperOrderList" class="tab-content">
+            <p>Đang tải đơn hàng...</p>
+        </div>
+
+        <div id="shipperRatingContent" class="tab-content" style="display:none;">
+            <h3 style="color: #ff5722;">⭐ Tổng kết Đánh giá Shipper</h3>
+            <div id="ratingSummary" style="padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+                <p>Đang tính toán...</p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

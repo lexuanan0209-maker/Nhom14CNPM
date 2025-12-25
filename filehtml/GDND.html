@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👤 Hồ sơ người dùng</title>
+    <link rel="stylesheet" href="../filecss/GDND.css">
+    <script src="../filejs/auth.js"></script>
+    <script src="../filejs/GDND.js" defer></script>
+    <script src="../filejs/rating.js" defer></script>
+</head>
+<body onload="checkAuth()">
+
+    <header class="header">
+        <h1>👤 Thông tin người dùng</h1>
+        <div class="auth-actions">
+            <button onclick="goLogin()" class="logout-btn" id="loginBtn">Đăng nhập</button>
+            <button onclick="goAdmin()" class="logout-btn" id="adminBtn" style="display:none;">Admin</button>
+            <button onclick="handleLogout()" class="logout-btn" id="logoutBtn">Đăng xuất</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">🏠 Trang chủ</a>
+        <a href="giohang.html">🛒 Giỏ hàng</a>
+        <a href="GDND.html" class="active">👤 Người dùng</a>
+    </nav>
+
+    <section class="user-container">
+
+        <div class="user-profile user-section">
+            <img src="https://via.placeholder.com/100/40e0d0/ffffff?text=AVT" 
+                 alt="Avatar người dùng" 
+                 class="avatar-large">
+            <div class="user-details">
+                <h2 id="userNameDisplay">Nguyễn Văn A <span class="verified-icon">✅</span></h2>
+                <p id="userPhoneDisplay">Số điện thoại: Chưa cập nhật</p>
+                <p>Người theo dõi: <b>120</b></p>
+                <p>Đang theo dõi: <b>80</b></p>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <h3>📦 Đơn mua</h3>
+            <div class="order-status">
+                <button id="btn-cho-xac-nhan" onclick="hienThiDonHang('Chờ xác nhận')">Chờ xác nhận</button>
+                <button id="btn-cho-lay-hang" onclick="hienThiDonHang('Chờ lấy hàng')">Chờ lấy hàng</button>
+                <button id="btn-dang-giao" onclick="hienThiDonHang('Đang giao')">Đang giao</button>
+                <button id="btn-danh-gia" onclick="hienThiDonHang('Đánh giá')">Đánh giá</button>
+            </div>
+            <div id="order-content" class="specialized-content">
+                <p class="note">Vui lòng chọn trạng thái đơn hàng để xem danh sách</p>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <h3>🛠️ Hỗ trợ</h3>
+            <div class="support-buttons">
+                <button onclick="hienThiHoTro('Trung tâm trợ giúp')">Trung tâm trợ giúp</button>
+            </div>
+            <div id="support-content" class="specialized-content">
+                <p class="note">Chọn một tùy chọn hỗ trợ để bắt đầu</p>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <h3>💡 Có thể bạn cũng thích</h3>
+            <div class="suggest-products" id="suggest-products">
+            </div>
+        </div>
+
+    </section>
+
+    <div id="ratingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRatingModal()">&times;</span>
+            <h4>Đánh giá sản phẩm</h4>
+            <div id="rating-form">
+                <p id="productNameRating"></p>
+                <div class="stars" id="star-rating">
+                    <span data-value="1" onclick="submitRating(1)">★</span>
+                    <span data-value="2" onclick="submitRating(2)">★</span>
+                    <span data-value="3" onclick="submitRating(3)">★</span>
+                    <span data-value="4" onclick="submitRating(4)">★</span>
+                    <span data-value="5" onclick="submitRating(5)">★</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
