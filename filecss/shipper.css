@@ -1,0 +1,197 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shipper-body {
+  background: #fef5f1; /* Đồng bộ nền ấm */
+}
+
+.header {
+  background: #ff5722; /* Màu cam chủ đạo */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-weight: 600;
+}
+
+.header .logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 15px;
+  background: #e0353f; /* Màu đỏ nổi bật */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bo góc đồng bộ */
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logout-btn:hover {
+  background: #c02d37;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.shipper-container {
+  padding: 30px; /* Tăng padding */
+  max-width: 950px;
+  margin: 30px auto;
+  background: #ffffff;
+  border-radius: 12px; /* Bo góc đồng bộ */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Đổ bóng mạnh mẽ hơn */
+  flex-grow: 1;
+}
+
+.shipper-container h2 {
+  color: #ff5722;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.order-card {
+  /* Thẻ hiển thị thông tin đơn hàng */
+  border: 1px solid #ffede3; /* Viền nhẹ theo tông cam */
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Bo góc thẻ */
+  background: #fffafa; /* Nền trắng hơi ngả hồng nhạt */
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Hiệu ứng hover nổi bật */
+  transform: translateY(-2px);
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+.order-info p {
+  margin: 5px 0;
+}
+
+.order-info .order-id {
+  font-weight: 700;
+  color: #ff5722;
+  font-size: 16px;
+}
+
+.shipper-tabs {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: none; /* Loại bỏ border dưới để tab nhìn clean hơn */
+}
+
+.shipper-tabs .tab-btn {
+  flex-grow: 1;
+  padding: 12px 10px;
+  border: none;
+  background: #f0f0f0; /* Nền xám nhạt */
+  color: #555;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px; /* Bo góc đồng bộ */
+  transition: all 0.3s;
+}
+
+.shipper-tabs .tab-btn:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.shipper-tabs .tab-btn.active {
+  /* Nút tab đang được chọn - Dùng màu xanh dương cho hành động Shipper */
+  background: #007bff;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  /* Có thể thêm border dưới để nhấn mạnh nếu muốn */
+  /* border-bottom: 3px solid #0056b3; */
+}
+
+/* --------------------------- */
+/* NÚT HÀNH ĐỘNG */
+
+.shipper-btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.shipper-btn {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px; /* Bo góc đồng bộ */
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  width: 50%; /* Chia đều cho 2 nút nếu có */
+  margin-top: 0;
+}
+
+/* Nút Bắt đầu Giao hàng  */
+.shipper-btn.start-shipping-btn {
+  background-color: #ff5722; /* Dùng màu cam chủ đạo */
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
+}
+
+.shipper-btn.start-shipping-btn:hover {
+  background-color: #e04e1c;
+  transform: translateY(-2px);
+}
+
+/* Nút Hoàn tất  */
+.shipper-btn.complete-btn {
+  background-color: #28a745; /* Màu xanh lá cây */
+  color: white;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+}
+
+.shipper-btn.complete-btn:hover {
+  background-color: #1e7e34;
+  transform: translateY(-2px);
+}
+
+/* Nút Hủy  */
+.shipper-btn.cancel-btn {
+  background-color: #dc3545; /* Màu đỏ */
+  color: white;
+}
+
+.shipper-btn.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #fff3e0; /* Nền footer ấm áp */
+  color: #777;
+  margin-top: auto;
+  font-size: 14px;
+  border-top: 1px solid #ffede3;
+}
