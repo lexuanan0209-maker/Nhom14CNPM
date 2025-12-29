@@ -99,7 +99,7 @@ function handleLogin(e) {
     localStorage.setItem(AUTH_KEY, 'true');
     localStorage.setItem('currentUser', JSON.stringify(user));
 
-    if (user.role === 'admin') window.location.href = 'index.html';
+    if (user.role === 'admin') window.location.href = 'admin.html';
     else if (user.role === 'shipper') window.location.href = 'shipper.html';
     else {
         const redirect = localStorage.getItem('redirectAfterLogin') || REDIRECT_PAGE;

@@ -24,7 +24,7 @@ body {
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  /* 👇 quan trọng */
+  
   text-align: center;
 }
 
@@ -50,11 +50,11 @@ body {
   transform: translateY(-50%) scale(1.05);
 }
 .header h1 {
-  font-size: 42px !important; /* tăng to hơn */
+  font-size: 42px !important; 
   font-weight: 600;
   font-family: "Segoe UI", sans-serif;
   margin: 0;
-  line-height: 1.2; /* giữ chữ gọn, không quá cao */
+  line-height: 1.2; 
 }
 
 .home-btn {
@@ -63,11 +63,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
 
-  font-size: 14px; /* 👈 nhỏ lại */
+  font-size: 14px; 
   font-weight: 600;
   padding: 6px 10px;
 
-  background-color: #2d89ef;
+  background-color: #e0353f;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -75,7 +75,7 @@ body {
 }
 
 .home-btn:hover {
-  background-color: #1b5fbd;
+  background-color: #c02d37;
 }
 
 /* --------------------------- */
@@ -99,8 +99,8 @@ body {
   border-radius: 8px 8px 0 0;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
-  text-decoration: none; /* ĐỂ XÓA GẠCH CHÂN */
-  color: #333; /* ĐỂ CHỮ THÀNH MÀU ĐEN/XÁM (thay vì xanh) */
+  text-decoration: none; 
+  color: #333; 
   display: inline-block;
 }
 
