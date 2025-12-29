@@ -139,15 +139,15 @@ body {
 }
 
 .filter-btn {
-  /* Đã sửa: Chuyển nền sang màu sáng hơn để chữ cam nổi bật */
+
   background: #ffede3; /* Nền Cam rất nhạt */
-  color: #ff5722; /* **QUAN TRỌNG:** Chữ màu Cam chủ đạo */
+  color: #ff5722; /*  Chữ màu Cam chủ đạo */
   border: 1px solid #ff5722; /* Thêm viền cam đậm để nút nổi bật */
   font-weight: 600;
 }
 
 .filter-btn:hover {
-  /* Khi rê chuột: nền cam đậm hơn */
+  
   background: #ff7043;
   color: white; /* Chuyển chữ thành trắng khi hover để dễ đọc */
 }
@@ -401,7 +401,7 @@ footer {
 #adminBtn {
   left: 20px !important; /* Đẩy sát lề trái 20px */
   right: auto !important; /* Hủy bỏ lệnh bám lề phải */
-  background: #ca9137 !important; /* Màu xanh lá cho dễ phân biệt */
+  background: #e0353f !important; /* Màu xanh lá cho dễ phân biệt */
 }
 
 /* Giữ nút Login và Logout ở bên phải */
